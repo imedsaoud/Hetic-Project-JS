@@ -1,0 +1,66 @@
+.home {
+  font-family: 'obelixpro';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #FFEE5B;
+  width: 100vw;
+
+  .home__title {
+    margin-bottom: 60px;
+    font-size: 40px;
+  }
+
+  .home__subtitle {
+    margin-bottom: 40px;
+    font-size: 24px;
+  }
+
+  .home__description {
+    margin-bottom: 30px;
+    margin-right: 100px;
+    margin-left: 100px;
+    font-size: 20px;
+    text-align: center;
+    font-family: Arial;
+    font-weight: bold;
+    line-height: 24px;
+    ;
+  }
+
+  .home__instructions {
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+
+
+    .instruction {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+
+  .home__play {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 20px;
+  }
+
+
+}
+
+#bastille {
+  height: 50%;
+  margin-top: 20px;
+}
+
+.instruction--crs {
+  margin-right: 80px;
+}

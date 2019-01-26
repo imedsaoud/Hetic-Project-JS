@@ -1,0 +1,374 @@
+@mixin animation-mixin($name, $posX, $posY) {
+    @keyframes #{$name} {
+        to {
+            transform: translate($posX, $posY);
+        }
+    }
+}
+
+
+// @keyframes smokyMoves {
+//     to {
+//         transform: translateY(70px)
+//     }
+// }
+
+
+
+.bastille {
+    width: 1280px;
+    height: 800px;
+    background-size: cover;
+    background-image: url('../medias/bastille.jpg');
+    position: absolute;
+}
+
+.game__character {
+    width: 40px;
+    height: 40px;
+    background-image: url('../medias/gilet.svg');
+    transform: translate(640px, 700px);
+    position: absolute;
+}
+
+.crs {
+    background-image: url('../medias/casque-crs.svg');
+}
+
+.game__enemy {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+
+
+@include animation-mixin(move1, 1070px, 500px);
+
+// .enemy2{
+//     transform: translate(1070px, 330px);
+//     animation: move2 0.5s infinite alternate linear;
+// }
+@include animation-mixin(move2, 1070px, 330px);
+
+// .enemy3{
+//     transform: translate(800px, 220px);
+//     animation: move3 0.6s infinite alternate linear;
+// }
+@include animation-mixin(move3, 545px, 220px);
+
+// .enemy4{
+//     transform: translate(950px, 335px);
+//     animation: move4 0.5s infinite alternate linear;
+// }
+@include animation-mixin(move4, 850px, 335px);
+
+
+
+
+.game__obstacle {
+    width: 68px;
+    height: 220px;
+    background-image: url('../medias/bus-vertical.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.game__obstacle--air {
+    width: 68px;
+    height: 200px;
+    background-image: url('../medias/bus-aerien.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.game__finishline {
+    width: 200px;
+    height: 20px;
+    position: absolute;
+}
+
+.game__yellowjacket {
+    width: 30px;
+    height: 30px;
+    background-image: url('../medias/gilet.svg');
+    transform: translate(1200px, 400px);
+    position: absolute;
+}
+
+.game__score--megaphone {
+    position: absolute;
+    transform: translate(120px, 5px);
+    color: white;
+    font-size: 12px;
+    font-family: 'obelixpro';
+}
+
+.game__score--cone {
+    position: absolute;
+    transform: translate(120px, 34px);
+    color: white;
+    font-size: 12px;
+    font-family: 'obelixpro';
+}
+
+.game__score--sign {
+    position: absolute;
+    transform: translate(300px, 5px);
+    color: white;
+    font-size: 12px;
+    font-family: 'obelixpro';
+}
+
+.game__score--jacket {
+    position: absolute;
+    transform: translate(120px, 5px);
+    color: white;
+    font-size: 12px;
+    font-family: 'obelixpro';
+
+}
+
+.game__score--cap {
+    position: absolute;
+    transform: translate(120px, 34px);
+    color: white;
+    font-size: 12px;
+    font-family: 'obelixpro';
+}
+
+.invisible {
+    opacity: 0;
+}
+
+
+
+//Element-victoire niveau 2
+
+.champs {
+    width: 1280px;
+    height: 800px;
+    background-size: cover;
+    background-image: url('../medias/champs.jpg');
+    position: absolute;
+}
+
+.game__megaphone {
+    width: 40px;
+    height: 40px;
+    background-image: url('../medias/megaphone.svg');
+    transform: translate(1200px, 550px);
+    position: absolute;
+}
+
+.game__cone {
+    width: 40px;
+    height: 40px;
+    background-image: url('../medias/cone.svg');
+    transform: translate(1200px, 120px);
+    position: absolute;
+}
+
+.game__sign {
+    width: 40px;
+    height: 40px;
+    background-image: url('../medias/placard.svg');
+    transform: translate(30px, 200px);
+    position: absolute;
+}
+
+@include animation-mixin(move5, 500px, 370px);
+@include animation-mixin(move9, 0px, 520px);
+@include animation-mixin(move7, 240px, 570px);
+@include animation-mixin(move8, 240px, 485px);
+@include animation-mixin(move6, 1020px, 625px);
+@include animation-mixin(move10, 0px, 440px);
+@include animation-mixin(move11, 240px, 400px);
+@include animation-mixin(move12, 370px, 760px);
+@include animation-mixin(move13, 0px, 610px);
+@include animation-mixin(move14, 560px, 760px);
+@include animation-mixin(move15, 1070px, 490px);
+@include animation-mixin(move16, 1070px, 200px);
+@include animation-mixin(move17, 220px, 320px);
+
+//Fin Element-victoire niveau 2
+
+.game__trash {
+    width: 65px;
+    height: 60px;
+    position: absolute;
+    background-image: url('../medias/trash.svg');
+}
+
+.game__cap {
+    width: 40px;
+    height: 40px;
+    background-image: url('../medias/cap.svg');
+    transform: translate(655px, 420px);
+    position: absolute;
+}
+
+.game__pave {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background-image: url('../medias/brick.svg');
+    background-repeat: no-repeat;
+    transform: translate(260px, 700px);
+}
+
+.game__fumi {
+    width: 40px;
+    height: 40px;
+    background-image: url('../medias/fumigene.svg');
+    transform: translate(20px, 280px);
+    position: absolute;
+}
+
+
+.game__barriere {
+    width: 200px;
+    height: 20px;
+    background-image: url('../medias/barriere-blanche.svg');
+    // background-color:black; 
+    position: absolute;
+}
+
+.game__barriere--short {
+    width: 157px;
+    height: 20px;
+    background-image: url('../medias/barriere-blanche.svg');
+    position: absolute;
+}
+
+.game__barriere--shortest {
+    width: 80px;
+    height: 20px;
+    background-image: url('../medias/barriere-blanche.svg');
+    position: absolute;
+}
+
+.is-open {
+    display: none;
+}
+
+.game__tank {
+    width: 286px;
+    height: 92px;
+    background: url('../medias/camionhorizontaldroit.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+
+
+    @keyframes show-and-hide {
+        from {
+            width: 0px;
+            height: 10px;
+            background-color: aqua;
+        }
+
+        to {
+            width: 200px;
+            height: 10px;
+            background-color: aqua;
+        }
+    }
+
+    .water {
+        animation: show-and-hide 0.7s infinite alternate;
+        transform: translate(280px, 14px);
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+}
+
+.game__smoke {
+    width: 80px;
+    height: 60px;
+    position: absolute;
+    // animation: smokyMoves 0.1s infinite alternate; 
+
+    &:after {
+        content: '';
+        display: block;
+        width: 110px;
+        height: 200px;
+        transform: translate(-10px, -10px);
+        background-image: url('../medias/smoke.svg');
+        background-repeat: no-repeat;
+        @keyframes smoke {
+            from {
+                opacity: 1;
+            }
+            
+            33% {
+                opacity: 0;
+               
+            }
+
+            66% {
+                opacity: 0; 
+            } 
+
+            to {
+                opacity: 1;  
+            }
+
+        }
+        animation: smoke 4s infinite;   
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//niveau 3
+
+.arc {
+    width: 1280px;
+    height: 800px;
+    background: url('../medias/elysee.jpg');
+    background-size: cover;
+    position: absolute;
+}
+
+.game__score--fumi {
+    position: absolute;
+    transform: translate(120px, 34px);
+    color: white;
+    font-size: 12px;
+    font-family: 'obelixpro';
+}
+
+.game__score--pave {
+    position: absolute;
+    transform: translate(120px, 5px);
+    color: white;
+    font-size: 12px;
+    font-family: 'obelixpro';
+}
+
+//animate enemies
+
+@include animation-mixin(move83, 0px, 0px);
+@include animation-mixin(move31, 262px, 431px);
+@include animation-mixin(move32, 750px, 742px);
+@include animation-mixin(move33, 950px, 363px);
+@include animation-mixin(move89, 1200px, 290px);
+@include animation-mixin(move, 700px, 50px);
+@include animation-mixin(move34, 673px, 404px);
+@include animation-mixin(move500, 170px, 742px);
